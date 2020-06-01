@@ -1,2 +1,2 @@
 # Next Level Week(NLW) - Rockeseat
-Repositório do projeto "Ecoleta", apresentado no Next Level Week da Rockeseat.
+Repositório do projeto __"Ecoleta"__, apresentado no __Next Level Week__ da **Rockeseat**.
