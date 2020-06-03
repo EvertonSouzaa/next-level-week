@@ -35,20 +35,12 @@
 
 /*padding preenchinento*/
 
-
 form {
     background-color: #F0FFFF;
-
-
     margin: 80px auto;
-
     padding: 64px;
-
     border-radius: 8px;
-
     max-width: 730px;
-
-
 }
 
 form h1 {

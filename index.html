@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt_br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
 
-    <link rel="shortcut icon" href="assets/icones/icone reciclagem.png">
+    <title>Ecoleta</title>
+    <link rel="shortcut icon" href="assets/icones/icone-reciclagem.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/modal.css">
+
     <link rel="stylesheet" href="/styles/responsive.css">
-    
-    
 </head>
+
 <body>
 
-        <div id="page-home"> 
+    <div id="page-home">
+        <div class="content">
 
+            <header>
+                <img src="/assets/icones/logo.svg" alt="Logomarca">
+                <a href="create-point.html">
+                    <span></span>
+                    Cadastre um ponto de coleta</a>
+            </header>
 
-    <div class="content"> 
+            <main>
+                <h1>Seu marketplace de coleta de resíduos</h1>
 
-        <header> 
-            <img src="/assets/icones/logo.svg" alt="Logomarca">
-            <a href="http://127.0.0.1:5500/create-point.html"> 
-                <span></span>
-                Cadastre um ponto de coleta
-            
-            </a>
-        </header>
+                <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
 
-        <main>
-            <h1>Seu marketplace de coleta de resíduos</h1>
-    
+                <!-- O ERRO ESTAVA NESSA LINHA, VOCÊ NÃO FECHOU A TAG "<a href.." -->
+                <!-- <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong> -->
+                <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
 
-            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+            </main>
 
-            <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong>
-            
-
-        </main>
-    
-    </div>
+        </div>
 
     </div>
     <div id="modal">
-         <div class="content">
+        <div class="content">
             <div class="header">
                 <h1>Pontos de Coleta</h1>
                 <a href="#">Fechar</a>
             </div>
             <form action="">
                 <label for="search">Cidade</label>
-                <div class ="search field">
-                    <input type="text" name= "search">
+                <div class="search field">
+                    <input type="text" name="search">
                     <button>
                         <img src="/assets/icones/search.svg" alt="Buscar">
-                    </button>                   
+                    </button>
                 </div>
             </form>
-        </div> 
-        
+        </div>
+
     </div>
 
-
 </body>
+
 </html>
