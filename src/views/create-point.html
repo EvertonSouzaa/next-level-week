@@ -8,13 +8,14 @@
 
 {% block styles %}
     <link rel="stylesheet" href="styles/create-point.css">
+    <link rel="stylesheet" href="styles/modal.css">
 {% endblock styles %}
 
 {% block content %}
     {% include "partials/page-header.html" %}
 
 
-<form action="">
+<form action="/savepoint" method="POST">
     <h1>Cadastro do ponto de coleta</h1>
     <fieldset>
         <legend>
@@ -28,26 +29,23 @@
             </div>
 
              <div class="field">
-                <label for="name">imagem da entidade</label>
+                <label for="name">Imagem da entidade</label>
                 <input type="url" name="image" required="required" placeholder="http://">
             </div>
         </div>
 
-        <fieldset>
-            <div class="field">
-                <label for="name">Nome da entidade</label>
-                <input type="text" name="name" required="required">
-            </div>
+       
             <div class="field-group">
                 <div class="field">
-                    <label for="address">Endereço</label>
-                    <input type="text" name="address" required="required">
+                    <label for="adress">Endereço</label>
+                    <input type="text" name="adress" required="required">
                 </div>
                 <div class="field">
-                    <label for="address2">Número/Complemento</label>
-                    <input type="text" name="address2" required="required">
+                    <label for="adress2">Número/Complemento</label>
+                    <input type="text" name="adress2" required="required">
                 </div>
             </div>
+
             <div class="field-group">
                 <div class="field">
                     <label for="state">Estado</label>
@@ -57,6 +55,7 @@
 
                     <input type="hidden" name="state">
                 </div>
+
                 <div class="field">
                     <label for="city">Cidade</label>
                     <select name="city" disabled="disabled" required="required">
@@ -65,33 +64,34 @@
                 </div>
             </div>
         </fieldset>
+        
         <fieldset>
             <legend>
                 <h2>Itens de coleta</h2>
                 <span>Selecione um ou mais  itens abaixo</span>
             </legend>
             <div class="items-grid">
-                <li data-id="1">
+                <li data-id="Lâmpadas">
                     <img src="/assets/icones/lampadas.svg" alt="Lâmpadas">
                     <span>Lâmpadas</span>
                 </li>
-                <li data-id="2">
+                <li data-id="Pilhas e Baterias">
                     <img src="/assets/icones/baterias.svg" alt="Pilhas e Baterias">
                     <span>Pilhas e Baterias</span>
                 </li>
-                <li data-id="3">
+                <li data-id="Papéis e Papelão">
                     <img src="/assets/icones/papeis-papelao.svg" alt="Papéis e Papelão">
                     <span>Papéis e Papelão</span>
                 </li>
-                <li data-id="4">
+                <li data-id="Resíduos Eletrônicos">
                     <img src="/assets/icones/eletronicos.svg" alt="Resíduos Eletrônicos">
                     <span>Resíduos Eletrônicos</span>
                 </li>
-                <li data-id="5">
+                <li data-id="Resíduos Orgânicos">
                     <img src="/assets/icones/organicos.svg" alt="Resíduos Orgânicos">
                     <span>Resíduos Orgânicos</span>
                 </li>
-                <li data-id="6">
+                <li data-id="Óleo de Cozinha">
                     <img src="/assets/icones/oleo.svg" alt="Óleo de Cozinha">
                     <span>Óleo de Cozinha</span>
                 </li>
@@ -100,7 +100,15 @@
         </fieldset>
         <button type="submit">Cadastrar ponto de coleta</button>
     </form>
+
 {% endblock content %}
+
+
+{% block modal %}
+     {% if saved %}
+         {%include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
     <script src="/scripts/create-point.js"></script>
